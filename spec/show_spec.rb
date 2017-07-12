@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require 'pry'
 
 describe Show do
 
@@ -25,7 +26,9 @@ describe Show do
 
     it "has a season" do
       game_of_thrones = Show.create(:name => "Game of Thrones", :day => "Sunday", :season => "Spring", :network => "HBO", :rating => 10)
+      # binding.pry
       expect(game_of_thrones.season).to eq("Spring")
+
     end
 
     it "has a season column and attribute added from another migration file" do
